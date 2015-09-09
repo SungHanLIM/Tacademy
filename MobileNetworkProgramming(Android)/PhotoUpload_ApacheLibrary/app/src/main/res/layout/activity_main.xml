@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/serverAddress"
+        android:text="http://192.168.205.197:3001"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/serverAddress"
+        android:text="이미지 선택"
+        android:id="@+id/imageSelectButton"
+        android:layout_marginTop="5dp"
+        android:onClick="selectImage"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/imageSelectButton"
+        android:layout_toRightOf="@id/imageSelectButton"
+        android:text="목록 보기"
+        android:onClick="showList"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/imageSelectButton"
+        android:layout_alignParentRight="true"
+        android:text="올리기"
+        android:onClick="uploadContents"
+        android:layout_marginTop="5dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageSelectButton"
+        android:layout_marginTop="10dp"
+        android:id="@+id/titleLabel"
+        android:text="Title"/>
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_toRightOf="@id/titleLabel"
+        android:layout_alignBaseline="@id/titleLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleLabel"
+        android:id="@+id/imageView"/>
+
+</RelativeLayout>

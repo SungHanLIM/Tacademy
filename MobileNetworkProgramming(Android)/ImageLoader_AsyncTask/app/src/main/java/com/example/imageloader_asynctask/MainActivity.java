@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             return null;
-        }
+        }f
 
         @Override
         protected void onPostExecute(Bitmap bitmap) {
