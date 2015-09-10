@@ -90,12 +90,13 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     Log.d(TAG, "Movie List : " + response);
                     JSONArray movies = response.getJSONArray("movies");
+                    // -------------------------------
                     for ( int i = 0 ; i < movies.length() ; i++) {
                         JSONObject item = (JSONObject) movies.get(i);
                         String title = item.getString("title");
                         movieList.add(title);
                     }
-
+                    // -------------------------------
                     adapter.notifyDataSetChanged();
 
                 } catch (JSONException e) {
