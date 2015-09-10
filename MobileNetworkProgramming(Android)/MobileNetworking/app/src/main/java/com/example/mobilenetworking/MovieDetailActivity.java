@@ -11,6 +11,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -52,6 +53,14 @@ public class MovieDetailActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(JSONObject response) {
                     try {
+                        JSONArray movies = response.getJSONArray("movies");
+
+                        /*for ( int i = 0 ; i < movies.length() ; i++) {
+                            JSONObject item = (JSONObject) movies.get(i);
+                            String title = item.getString("movie_id");
+                            movieList.add(title);
+                        }*/
+
                         mMovieInfo.setText(response.toString(4));
                     } catch (JSONException e) {
                         Log.e(TAG, "JSONException", e);
