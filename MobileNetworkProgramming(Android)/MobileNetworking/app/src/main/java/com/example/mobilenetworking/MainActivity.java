@@ -9,7 +9,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -71,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void composeNewMovie(View v) {
-        Toast.makeText(MainActivity.this, "새 영화 정보 입력하기 - 구현 중", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, ComposeMovieActivity.class);
+        startActivity(intent);
     }
 
     public void refresh(View v) {
