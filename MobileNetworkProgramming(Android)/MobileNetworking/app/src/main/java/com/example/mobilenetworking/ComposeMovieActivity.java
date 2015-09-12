@@ -81,7 +81,6 @@ public class ComposeMovieActivity extends AppCompatActivity {
                 String year = mYear.getText().toString();
                 String synopsis = mSynopsis.getText().toString();
                 String reviews = mReview.getText().toString();
-
                 // Log.d(TAG, "!!!!!!!!!!!!!!!!!!!!!!!!!! title : " + title);
 
                 Map<String, String> params = new HashMap<>();

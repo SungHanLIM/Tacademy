@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
@@ -28,6 +29,13 @@ public class MovieDetailActivity extends AppCompatActivity {
 
     private static final String TAG = "MovieDetail";
     private RequestQueue mQueue;
+
+    private EditText mTitle;
+    private EditText mDirector;
+    private EditText mYear;
+    private EditText mSynopsis;
+    private EditText mReview;
+
     private TextView mMovieInfo;
 
 
@@ -36,6 +44,12 @@ public class MovieDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_detail);
+
+        mTitle = (EditText)findViewById(R.id.movie);
+        mDirector = (EditText)findViewById(R.id.direcor);
+        mYear = (EditText)findViewById(R.id.year);
+        mSynopsis = (EditText)findViewById(R.id.synopsis);
+        mReview = (EditText)findViewById(R.id.review);
 
         mMovieInfo = (TextView) findViewById(R.id.movieInfo);
 
@@ -57,6 +71,7 @@ public class MovieDetailActivity extends AppCompatActivity {
             // 공백 문자가 +가 된다. %20으로 변환
             String encoded = URLEncoder.encode(movieId, "UTF-8").replace("+", "%20");
             String url = MainActivity.SERVER_ADDRESS + "/movies/" + encoded;
+            //String url = MainActivity.SERVER_ADDRESS + "/movies/" + "test";
             Log.d(TAG, "MovieDetail : " + url);
 
             JsonObjectRequest request = new JsonObjectRequest(url, new Response.Listener<JSONObject>() {
@@ -66,12 +81,13 @@ public class MovieDetailActivity extends AppCompatActivity {
 
                     try {
                         JSONObject content = response.getJSONObject("movie");
-
                         contents =   "❖ 영화 제목 : " + content.getString("title") + "\n"
                                    + "❖ 감독 이름 : " + content.getString("director") + "\n"
                                    + "❖ 제작 년도 : " + content.getString("year") + "\n"
                                    + "❖ 줄 거 리 : " + content.getString("synopsis") + "\n"
                                    + "❖ 리    뷰 : " + content.getString("reviews");
+
+                        Log.d(TAG, "!!!!!!!!!!!!!!!!!!!!"+ content.getString("title"));
 
                         mMovieInfo.setText(contents);
                     } catch (JSONException e) {
@@ -94,11 +110,13 @@ public class MovieDetailActivity extends AppCompatActivity {
 
     // 영화정보 수정 버튼이 클릭되면 ModifyMovieActivity로 이동
     public void modifyMovie(View v) {
+        Intent intent = new Intent(MovieDetailActivity.this, ModifyMovieActivity.class);
+
+        String movieId = getIntent().getStringExtra("movieId");
+        intent.putExtra("movieId", movieId);
+        startActivity(intent);
 
         finish();       // Activity 이동하면서 이전의 Activity를 종료한다.
-        Intent intent = new Intent(this, ModifyMovieActivity.class);
-
-        startActivity(intent);
     }
 
     // 삭제 버튼이 클릭되면 삭제 기능 실행

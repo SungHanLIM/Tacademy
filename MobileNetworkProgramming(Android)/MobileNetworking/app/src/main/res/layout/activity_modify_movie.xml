@@ -22,32 +22,27 @@
     <EditText
         android:id="@+id/movie"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="영화 제목" />
+        android:layout_height="wrap_content" />
 
     <EditText
-        android:id="@+id/direcor"
+        android:id="@+id/director"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="감독 이름" />
+        android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/year"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="제작 년도" />
+        android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/synopsis"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="줄 거 리"/>
+        android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/review"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="리     뷰"/>
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/sendButton"

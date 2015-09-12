@@ -13,7 +13,7 @@
         android:id="@+id/serverAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="http://192.168.205.162:3000"/>
+        android:text="http://117.16.198.227:3000"/>
         <!--android:text="http://192.169.205.146:3000/movies"/>-->
 
 

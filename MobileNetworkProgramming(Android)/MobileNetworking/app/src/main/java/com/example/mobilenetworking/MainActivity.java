@@ -52,8 +52,10 @@ public class MainActivity extends AppCompatActivity {
                 // 영화 제목과 영화 ID가 같다.
                 String movieId = movieList.get(position);
                 intent.putExtra("movieId", movieId);
-
                 startActivity(intent);
+
+
+
             }
         });
 
