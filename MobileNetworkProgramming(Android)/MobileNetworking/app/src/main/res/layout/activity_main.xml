@@ -26,25 +26,16 @@
             android:text="갱신"
             android:onClick="refresh"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
 
         <Button
             android:text="추가"
             android:onClick="composeNewMovie"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
 
-        <Button
-            android:text="수정"
-            android:onClick="composeNewMovie"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <Button
-            android:text="삭제"
-            android:onClick="composeNewMovie"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
     </LinearLayout>
 
     <ListView

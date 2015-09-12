@@ -69,15 +69,18 @@ public class MainActivity extends AppCompatActivity {
         resolveMovieList();
     }
 
+    // 새 영화정보 추가
     public void composeNewMovie(View v) {
         Intent intent = new Intent(MainActivity.this, ComposeMovieActivity.class);
         startActivity(intent);
     }
 
+    // 영화 상세정보 보기
     public void refresh(View v) {
         resolveMovieList();
     }
 
+    // 영화목록 출력
     void resolveMovieList() {
         movieList.clear();
 

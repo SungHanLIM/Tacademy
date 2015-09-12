@@ -22,6 +22,27 @@
         android:text="영화 정보"
         android:id="@+id/movieInfo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="373dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <Button
+            android:text="수정"
+            android:onClick="modifyMovie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
+
+        <Button
+            android:text="삭제"
+            android:onClick="deletewMovie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
+    </LinearLayout>
 
 </LinearLayout>

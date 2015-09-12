@@ -1,26 +1,36 @@
 package com.example.mobilenetworking;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.NetworkResponse;
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.Map;
 
 public class MovieDetailActivity extends AppCompatActivity {
 
     private static final String TAG = "MovieDetail";
     private RequestQueue mQueue;
     private TextView mMovieInfo;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +50,7 @@ public class MovieDetailActivity extends AppCompatActivity {
         resolveMovieDetail();
     }
 
+    // 영화정보 상세 보기
     void resolveMovieDetail() {
         try {
             String movieId = getIntent().getStringExtra("movieId");
@@ -79,6 +90,52 @@ public class MovieDetailActivity extends AppCompatActivity {
             Log.e(TAG, "Exception", e);
             e.printStackTrace();
         }
+    }
 
+    // 영화정보 수정 버튼이 클릭되면 ModifyMovieActivity로 이동
+    public void modifyMovie(View v) {
+
+        finish();       // Activity 이동하면서 이전의 Activity를 종료한다.
+        Intent intent = new Intent(this, ModifyMovieActivity.class);
+
+        startActivity(intent);
+    }
+
+    // 삭제 버튼이 클릭되면 삭제 기능 실행
+    public void deletewMovie(View v) throws UnsupportedEncodingException {
+
+        finish();       // Activity 이동하면서 이전의 Activity를 종료한다.
+
+        String movieId = getIntent().getStringExtra("movieId");
+        // 공백 문자가 +가 된다. %20으로 변환
+        String encoded = URLEncoder.encode(movieId, "UTF-8").replace("+", "%20");
+        String url = MainActivity.SERVER_ADDRESS + "/movies/" + encoded;
+
+        StringRequest request = new StringRequest(Request.Method.DELETE, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e(TAG, "Error", error);
+                NetworkResponse response = error.networkResponse;
+                if ( response != null )
+                    Log.e(TAG, "Error Response : " + response.statusCode);
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                return null;
+            }
+
+            @Override
+            public String getBodyContentType() {
+                // 컨텐트 타입
+                return "application/x-www-form-urlencoded; charset=UTF-8";
+            }
+        };
+        mQueue.add(request);
     }
 }

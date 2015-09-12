@@ -49,14 +49,15 @@ public class ComposeMovieActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Log.d(TAG, "Server Address : " + MainActivity.SERVER_ADDRESS);
-        sendRequest(null);
+        //sendRequest(null);
     }
 
     // 요청 보내기
     public void sendRequest(View v) {
-        Log.d(TAG, "!!!!!!!!!!!!!!!!!!!!!!!!!! : " + mTitle.getText().toString());
+        finish();
+
         String url = MainActivity.SERVER_ADDRESS + "/movies/";
-        Log.d(TAG, "!!!!!!!!!!!!!!!!!!!!!!!!!! : " + url);
+
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -74,7 +75,7 @@ public class ComposeMovieActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 // 바디 작성
-                String movie_id = mTitle.getText().toString();
+                //String movie_id = mTitle.getText().toString();
                 String title = mTitle.getText().toString();
                 String director = mDirector.getText().toString();
                 String year = mYear.getText().toString();
@@ -84,7 +85,7 @@ public class ComposeMovieActivity extends AppCompatActivity {
                 // Log.d(TAG, "!!!!!!!!!!!!!!!!!!!!!!!!!! title : " + title);
 
                 Map<String, String> params = new HashMap<>();
-                params.put("movie_id", movie_id);
+               // params.put("movie_id", movie_id);
                 params.put("title", title);
                 params.put("director", director);
                 params.put("year", year);

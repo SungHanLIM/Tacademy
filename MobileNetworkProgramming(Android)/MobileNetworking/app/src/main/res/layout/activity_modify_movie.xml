@@ -2,15 +2,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.vanillastep.example.moviest.ComposeMovieActivity">
+    android:paddingTop="@dimen/activity_vertical_margin">
 
     <TextView
-        android:text="@string/hello_world"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="영화 정보 수정 및 리뷰 작성"
+        android:id="@+id/headerLabel"
+        android:textSize="27sp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <EditText
+        android:id="@+id/movie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="영화 제목" />
+
+    <EditText
+        android:id="@+id/direcor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="감독 이름" />
+
+    <EditText
+        android:id="@+id/year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="제작 년도" />
+
+    <EditText
+        android:id="@+id/synopsis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="줄 거 리"/>
+
+    <EditText
+        android:id="@+id/review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="리     뷰"/>
+
+    <Button
+        android:id="@+id/sendButton"
+        android:onClick="sendRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="완료"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>
