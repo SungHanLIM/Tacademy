@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tm:TermDictionary xmlns:tm="http://exerd.com/term-model" version="1.1">
+  <term name="번호" description="차례를 나타내거나 식별하기 위해 붙이는 숫자." physicalName="ID" physicalDescription="ID"/>
+  <term name="코드" description="&lt;컴퓨터> 정보를 나타내기 위한 기호 체계. 데이터 코드, 기능 코드, 오류를 검사하기 위한 검사 코드 따위가 있다." physicalName="CD" physicalDescription="CODE"/>
+  <term name="이름" description="다른 것과 구별하기 위하여 사물, 단체, 현상 따위에 붙여서 부르는 말." physicalName="NM" physicalDescription="NAME">
+    <synonyms>성명</synonyms>
+  </term>
+  <term name="시간" description="어떤 시각에서 어떤 시각까지의 사이." physicalName="TM" physicalDescription="TIME"/>
+  <term name="일시" description="날짜와 시간을 아울러 이르는 말." physicalName="DT" physicalDescription="DATE">
+    <synonyms>날짜</synonyms>
+  </term>
+  <term name="시작" description="어떤 일이나 행동의 처음 단계를 이루거나 그렇게 하게 함. 또는 그 단계." physicalName="STT" physicalDescription="START"/>
+  <term name="종료" description="마무리 짓다. 끝나다." physicalName="ED" physicalDescription="END">
+    <synonyms>끝</synonyms>
+  </term>
+  <term name="교시" description="어떤 행동이나 일 따위가 끝남. 또는 행동이나 일 따위를 끝마침. ‘끝남’, ‘마침’으로 순화." physicalName="PRD" physicalDescription="PERIOD"/>
+  <term name="실" description="[의존 명사] ~실. 방을 세는 단위." physicalName="RM" physicalDescription="ROOM">
+    <synonyms>방</synonyms>
+  </term>
+  <term name="강의" description="학문이나 기술의 일정한 내용을 체계적으로 설명하여 가르침." physicalName="LCTR" physicalDescription="LECTURE">
+    <synonyms>강좌</synonyms>
+  </term>
+  <term name="요일" description="일주일의 각 날을 이르는 말." physicalName="DY" physicalDescription="DAY"/>
+  <term name="약어" description="준말. 두 단어 이상으로 이루어진 표제어를 원말로 하여 각 단어에서 주로 한 음절씩 뽑아 만든 어휘." physicalName="ABVAT" physicalDescription="ABBREVIATION"/>
+  <term name="강사" description="학교나 학원 따위에서 위촉을 받아 강의를 하는 사람. 시간 강사와 전임 강사가 있다." physicalName="ISTRT" physicalDescription="INSTRUCTOR"/>
+  <term name="학과" description="&lt;교육> 교수 또는 연구의 편의를 위하여 구분한 학술의 분과." physicalName="DEPT" physicalDescription="DEPARTMENT"/>
+  <term name="학과장" description="학과의 장" physicalName="DN" physicalDescription="DEAN"/>
+  <term name="교과목" description="&lt;교육> 학교에서 가르쳐야 할 지식이나 경험의 체계를 세분하여 계통을 세운 영역." physicalName="SJCT" physicalDescription="SUBJECT">
+    <synonyms>교과</synonyms>
+    <synonyms>과목</synonyms>
+  </term>
+  <term name="교과코드" description="교과목의 코드" physicalName="SJCT_CD" physicalDescription="SUBJECT CODE"/>
+  <term name="과목명" description="교과목의 이름" physicalName="SJCT_NM" physicalDescription="SUBJECT NAME"/>
+  <term name="과정" description="&lt;교육>일정한 기간에 교육하거나 학습하여야 할 과목의 내용과 분량" physicalName="CR" physicalDescription="COURSE"/>
+  <term name="수강신청" description="강의 과정을 신청하다." physicalName="CR_APP" physicalDescription="COURSE APPLICATION"/>
+  <term name="수강등록" description="강의 과정을 등록하다." physicalName="CR_REG" physicalDescription="COURSE REGISTRATION"/>
+  <term name="학생" description="학교에 다니면서 공부하는 사람." physicalName="STD" physicalDescription="STUDENT"/>
+  <term name="학번" description="주로 대학교나 대학원에서, 학교 행정상의 필요에 의하여 입학 연도와 학과에 따라 학생에게 부여한 고유 번호." physicalName="STD_ID" physicalDescription="STUDENT ID"/>
+  <term name="학기" description="&lt;교육> 한 학년 동안을 학업의 필요에 의하여 구분한 기간. 보통 3~8월과 9~2월의 두 학기로 나눈다." physicalName="SMST" physicalDescription="SEMESTER"/>
+  <term name="신청" description="단체나 기관에 어떠한 일이나 물건을 알려 청구함." physicalName="APP" physicalDescription="APPLICATION"/>
+  <term name="수납" description="돈이나 물품 따위를 받아 거두어들임." physicalName="RCV" physicalDescription="RECEIVE">
+    <synonyms>받다</synonyms>
+  </term>
+  <term name="수강" description="강의나 강습을 받음." physicalName="RCV_CR" physicalDescription="RECEIVE COURSE"/>
+  <term name="구분" description="일정한 기준에 따라 전체를 몇 개로 갈라 나눔." physicalName="CLFC" physicalDescription="CLASSIFICATION">
+    <synonyms>분류</synonyms>
+  </term>
+  <term name="등록" description="일정한 자격 조건을 갖추기 위하여 단체나 학교 따위에 문서를 올림." physicalName="RGSTN" physicalDescription="REGISTRATION"/>
+  <term name="교수" description="대학에서, 전문 학술을 가르치고 연구하는 사람. 부교수, 조교수, 전임 강사가 있는데 흔히 이들을 통틀어 이르는 말이다." physicalName="PRFS" physicalDescription="PROFESSOR"/>
+  <term name="교원" description="&lt;교육> 각급 학교에서 학생을 가르치는 사람을 통틀어 이르는 말. 교사, 교감, 교장, 교수, 총장, 학장, 전임 강사 등이 있다." physicalName="FCLT" physicalDescription="FACULTY"/>
+  <term name="정" description="주" physicalName="MAIN" physicalDescription="MAIN"/>
+  <term name="부" description="보조" physicalName="SUB" physicalDescription="SUB"/>
+  <term name="년도" description="일정한 기간 단위로서의 그해." physicalName="YR" physicalDescription="YEAR"/>
+  <term name="학년" description="수업하는 과목의 정도에 따라 일 년을 단위로 구분한 학교 교육의 단계." physicalName="GRD" physicalDescription="GRADE">
+    <synonyms>등급</synonyms>
+  </term>
+  <tag name="태그"/>
+</tm:TermDictionary>
