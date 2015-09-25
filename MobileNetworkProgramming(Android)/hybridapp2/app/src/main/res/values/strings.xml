@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <string name="hello">Hello World, Hybridapp2Activity!</string>
-    <string name="string_head">Message from HTML\n</string>
-    <string name="app_name">HybridApp</string>
-<string name="button_title">Send Message</string>
-<string name="app_message">Hello, Hybrid(APP)!!</string></resources>
