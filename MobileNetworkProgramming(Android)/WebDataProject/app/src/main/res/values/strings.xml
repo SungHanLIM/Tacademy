@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">WebDataProject</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_main">WebData Test</string>
+    <string name="str1">모바일서버예제</string>
+    <string name="str2">분류</string>
+    <string name="str3">검색</string>
+    <string name="str4">회원가입</string>
+    <string name="strName">이    름</string>
+    <string name="strId">아이디</string>
+    <string name="strPw">암    호</string>
+    <string name="strTel">전    화</string>
+    <string name="strAddr">주    소</string>
+    <string name="strMember">회  원  가  입</string>
+    <string name="strComment">코멘트</string>
+    <string name="strOrder">구매</string>
+    <string name="strCheck">ID체크</string>
+    <string name="str5">로그인</string>
+    <string name="str6">타입</string>
+
+</resources>
